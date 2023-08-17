@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+    <meta http-equiv="refresh" content="15">
     <title>Formulários, cabeçalhos, rodapé e gráficos</title>
 
     <style>
@@ -13,12 +15,88 @@
     </style>
 </head>
 <body>
-    <div style="width: 40em; height: 40em; border: 2px solid salmon;">
-        <form method="post" action="./Formulario/formularioPreenchido.html" name="Formulario">
+    <div style="width: 45em; height: 60em; border: 2px solid salmon; background: linear-gradient(45deg, #3463a0, #d60909);">
+        <form method="post" action="./Formulario/formularioPreenchido.html" name="Formulario" autocomplete="on">
             <h1 style="text-align: center;">Cadastro de Classe - RPG Form</h1>
-            <p>Nome: <input type="text" maxlength="20" size="30px" name="nome"></p>
-            <p>Idade: <input type="text" maxlength="4" size="30px" name="idade"></p>
+            <p style="display: inline;">
+                <label for="nome">Nome:</label>
+                <input type="text" maxlength="30" size="30px" name="nome" id="nome" required autocomplete="nickname" placeholder="Nome" list="nomes">
+
+                <datalist id="nomes">
+                    <option>Richard</option>
+                    <option>Karla</option>
+                    <option>Sabrina</option>
+                    <option>Louis</option>
+                    <option>Alucard</option>
+                </datalist>
+
+                <label for="idade">Idade:</label> 
+                <input type="number" min="0" max="9999" step="1" value="0" name="idade" id="idade" required placeholder="Idade">
+            </p>
+            <p>
+                <label for="perfil">Ícone do Perfil: </label>
+                <input type="file" name="perfil" id="perfil">
+                Sexo:
+                <input type="radio" name="sexo" value="M"> Masculino </input>
+                <input type="radio" name="sexo" value="F"> Feminino </input></p> 
+            <p style="display: inline;">
+                <label for="humano">Raça:</label></p>
+            <select name="Raca">
+                <option value="Humano" id="humano">Humano</option>
+                <option value="Elfo">Elfo</option>
+                <option value="Orc">Orc</option>
+                <option value="Troll">Troll</option>
+                <option value="Anao">Anão</option>
+            </select>
+            <p style="display: inline;"><label for="oprimida">Classe:</label></p>
+            <select name="Classe">
+
+                <optgroup label="Fracassados">
+                    <option value="Oprimida" id="oprimida">Oprimida</option>
+                    <option value="Bardo">Bardo</option>
+                </optgroup>
+
+                <optgroup label="Burgueses">
+                    <option value="Clerigo">Clerigo</option>
+                    <option value="Arqueiro">Arqueiro</option>
+                    <option value="Mago">Mago</option>
+                    <option value="Guerreiro">Guerreiro</option>
+                    <option value="Assassino">Assassino</option>
+                </optgroup>
+            </select>
+            <p style="display: inline;">
+                <label for="cor">Cor da pele: </label>
+                <input type="color" value="#FFFFFF" name="cor" id="cor">
+                <label for="saturacao">Saturação: </label>
+                <input type="range" name="saturacao" id="saturacao" min="1" max="10" value="5" 
+                oninput="numero.innerHTML = Number(saturacao.value)"> <!--Esse código já faz parte do JavaScript, e mostra o valor da linha no Output-->
+                <output name="numero" id="numero">5</output>
+            </p>
+
+            <p>
+                <label for="descricao">Descrição: </label><br>
+                <textarea name="descricao" id="descricao" cols="30" rows="10" placeholder="Descreva seu personagem..."></textarea>
+            </p>
+
+            <fieldset> <!---Isso significa que vai agrupar todas essas informações em uma caixinha, ligando cada uma delas-->
+                <legend>Características</legend>
+                <p><label for="gentil"><input type="checkbox" name="Gentil" value="Gentil" id="gentil">Gentil</label></p>
+                <p><label for="opressor"><input type="checkbox" name="Opressor" value="Opressor" id="opressor" checked>Opressor</label></p>
+                <p><label for="covarde"><input type="checkbox" name="Covarde" value="Covarde" id="covarde">Covarde</label></p>
+                <p><label for="valente"><input type="checkbox" name="Valente" value="Valente" id="valente">Valente</label></p>
+                <p><label for="bobo"><input type="checkbox" name="Bobo" value="Bobo" id="bobo">Bobo</label></p>
+                <p><label for="corajoso"><input type="checkbox" name="Corajoso" name="Corajoso" id="corajoso">Corajoso</label></p>
+                <p><label for="galanteador"><input type="checkbox" name="Galanteador" name="Galanteador" id="galanteador">Galanteador</label></p>
+            </fieldset>
             
+            <p>
+                Mês de Cadastro
+                <input type="month" name="mes" id="mes">
+                Data Atual
+                <input type="date" name="data" id="data">
+            </p>
+            <button type="submit" name="Enviar">Enviar</button>
+            <button type="reset" name="Resetar">Limpar</button>
         </form>
     </div>
 </body>
