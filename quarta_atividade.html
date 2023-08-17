@@ -4,8 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formatação com folhas de estilo</title>
+    <!--Trabalhando com Media Types / Tipos de Mídia-->
+    <!--Esse "media" se refere ao tipo de mídia que adotará cada estilo.-->
+    <!--"Print" é quando ele for impresso por alguma impressora e "Screen" é pra tela normal do navegador-->
+    <link rel="stylesheet" href="./Estilos/pagina.css" media="screen">
+    <link rel="stylesheet" href="./Estilos/impressao.css" media="print">
 </head>
 <body>
-    <h1>Finalmente, estilos.</h1>
+    <h1>Jornal do Fim</h1>
+    <header>
+        <nav>
+            <li>Esportes</li>
+            <li>Novelas</li>
+            <li>Jogos digitais</li>
+            <li>Moda</li>
+        </nav>
+    </header>
+    <main>
+        <article title="Larissa Manoela - explorada desde cedo por seus pais">
+            <h2>Larissa Manoela - explorada desde cedo por seus pais</h2>
+            <p>Em março, Larissa e os pais se reuniram na presença de advogados para tentar uma redistribuição na sociedade das empresas. Os pais concordaram com a divisão meio a meio da empresa mas, segundo Larissa, desde que ganhassem 6% da renda da filha pelos próximos 10 anos.</p>
+            <img src="https://scontent-gru1-1.xx.fbcdn.net/v/t39.30808-6/366563291_597725485844968_6010371050356334674_n.jpg?stp=cp0_dst-jpg_e15_p320x320_q65&_nc_cat=101&ccb=1-7&_nc_sid=8024bb&_nc_ohc=-JKbAPN7va8AX8l8FEU&_nc_ht=scontent-gru1-1.xx&oh=00_AfDB1_PbJbyqVKz8QGKgnFpU6ATN6lfMK8g0L7GIJl9AIw&oe=64E4117E" alt="Depoimento da mãe de Larissa Manoela sobre suas finanças.">
+            <p><strong>“Quer me chamar de mercenária, pode chamar. Mas o que eu não vou abrir mão de um centavo é cuidar do seu dinheiro. O resto, você pode fazer aquilo que você quer”</strong>, disse Silvana na conversa gravada pela artista no fim de 2022.</p>
+            <p>“Ela explicou que, quando fez 18 anos, começou a questionar os pais sobre o dinheiro que ela ganhava com o trabalho. “Eu só queria entender esse negócio. Como estava essa questão financeira? Que nunca me era apresentada, que eu não sabia o que recebia e o que estava sendo pago?”, afirma.</p>
+        </article>
+        <article title="Suspeitos utilizam texto Lorem para burlar sistema de notícias">
+            <h2>Suspeitos utilizam texto Lorem para burlar sistema de notícias</h2>
+            <p>A respeito do texto usado pelos suspeitos nesta noite de quinta-feira, ele ainda continua sendo investigado. A seguir exibimos uma parte deste texto:</p>
+            <p class="lorem">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, voluptatum neque? Odit quidem voluptate, excepturi, laudantium repellat velit obcaecati consequuntur ducimus et voluptas ut. Itaque, distinctio velit! Non, eius quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur cupiditate animi harum, fugit necessitatibus dignissimos est fuga ipsa qui nesciunt eaque deserunt sit ipsum corrupti blanditiis aliquid suscipit itaque neque? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eligendi enim maiores architecto quibusdam praesentium beatae tenetur minima, iste voluptate quas ratione! Vero libero animi nulla modi in fuga ea!</p>
+            <p id="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla vel atque, saepe sequi ducimus unde maiores non illo aperiam consectetur mollitia, eius autem excepturi quibusdam, omnis quo nihil beatae sit? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam aspernatur quas deleniti hic! Harum vitae unde dolor maiores vel. Aliquid ab fugiat officiis. Rem saepe ratione maxime modi delectus consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quibusdam, consequuntur error ea reiciendis recusandae suscipit, laboriosam vitae iusto neque harum, consectetur nam dolor aut tempore odit cumque corrupti aliquid. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis repellendus praesentium eligendi repellat, harum saepe numquam nemo laboriosam odio. Aspernatur cupiditate officia saepe tenetur quas architecto, nostrum possimus molestias ipsa!</p>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; Jornal do Fim</p>
+    </footer>
 </body>
 </html>
