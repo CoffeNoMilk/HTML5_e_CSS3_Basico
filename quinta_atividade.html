@@ -8,8 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
     <link rel="stylesheet" href="./Estilos/estilo.css" media="all">
     <link rel="stylesheet" href="./Estilos/imagens.css">
+    <link rel="stylesheet" href="./Estilos/media-querys.css">
 </head>
-<body>
+<body onresize="mudarTamanho()">
     <header>
         <h1>Meu Site</h1>
         <span id="icone" class="material-symbols-outlined" onclick="mostrarMenu()">menu</span>
@@ -37,6 +38,16 @@
     </main>
 
     <script>
+        function mudarTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = "block"
+            }
+            else
+            {
+                itens.style.display = "none"
+            }
+        }
+
         function mostrarMenu() {
             if (itens.style.display == "block") {
                 itens.style.display = "none"
