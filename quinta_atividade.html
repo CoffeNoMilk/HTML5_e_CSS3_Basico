@@ -4,35 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imagens, efeitos especiais, menus e cores</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="./Estilos/estilo.css" media="all">
     <link rel="stylesheet" href="./Estilos/imagens.css">
-    
-    <style>
-        li{
-            display: none;
-        }
-        
-        li:hover{
-            display: block;
-        }
-    </style>
 </head>
 <body>
-    <h1>Imagens</h1>
     <header>
-        <menu>
-            <p>
-                <label for="casa">Casa</label>
-                
-            </p>
+        <h1>Meu Site</h1>
+        <span id="icone" class="material-symbols-outlined" onclick="mostrarMenu()">menu</span>
+        <menu id="itens">
+            <nav>
+                <ul>
+                    <li><a href="#">Imagens</a></li>
+                    <li><a href="#">Links</a></li>
+                    <li><a href="#">Sons</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Estórias</a></li>
+                </ul>
+            </nav>
         </menu>
     </header>
     <main>
-        <img src="https://c.wallhere.com/photos/d0/75/Mob_Psycho_100_Kageyama_Shigeo_anime_creatures-2205553.jpg!d" alt="Mob 100%" width="600px" height="400px">
+        <article>
+            <img src="https://c.wallhere.com/photos/d0/75/Mob_Psycho_100_Kageyama_Shigeo_anime_creatures-2205553.jpg!d" alt="Mob 100%">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, facere, pariatur dolorum numquam saepe expedita quaerat porro aspernatur temporibus veritatis voluptatum tempore iste! Blanditiis quis animi alias rem numquam voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae qui rerum numquam vero delectus accusamus reprehenderit sit officiis beatae sequi iusto harum cumque accusantium, et, sed asperiores porro. Ea, ratione!</p>
 
-        <img src="https://gkpb.com.br/wp-content/uploads/2022/09/vwwzu7ygc6a.jpg" alt="Mob romantic" width="600px" height="400px">
-    
-        <img class="canvas" src="https://blog.emporiochapadadiamantina.com.br/wp-content/uploads/2020/04/%C3%A7ol-1024x597.jpg" alt="Gapão">
-    
+            <img src="https://gkpb.com.br/wp-content/uploads/2022/09/vwwzu7ygc6a.jpg" alt="Mob romantic">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, ipsum numquam. Doloremque quos architecto, dolores sunt provident tempora quod quasi voluptates sequi iusto deserunt asperiores. Laudantium, consequuntur id. Fugit, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum odit impedit exercitationem quis expedita minima perferendis sequi veniam hic, ullam libero officiis, velit architecto sint obcaecati? Sequi nihil ut ipsa? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, ut? Illo porro eaque sit corporis repellendus eveniet quod earum architecto quos aspernatur laborum autem, nesciunt ea ab rerum fugit. Nesciunt?
+            </p>
+        </article>
     </main>
+
+    <script>
+        function mostrarMenu() {
+            if (itens.style.display == "block") {
+                itens.style.display = "none"
+            } 
+            else
+            {
+                itens.style.display = "block"
+            }
+        }
+    </script>
+
 </body>
 </html>
